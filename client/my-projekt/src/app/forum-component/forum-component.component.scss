@@ -1,0 +1,69 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:5px;
+    align-items: center;
+}
+
+.forum-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 390px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    gap: 40px;
+}
+
+.forum-form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.forum-form .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.forum-form button {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: cornflowerblue;
+    width: 80%;
+    color: white;
+    padding: 10px;
+}
+
+.forum-form button:hover {
+    background-color: rgb(50, 74, 120);
+}
+
+.forum-form button[type="button"] {
+    background-color: rgb(101, 231, 101);
+}
+
+.forum-form button[type="button"]:hover {
+    background-color: rgb(57, 129, 57);
+}
+
+.forum-form button[type="reset"] {
+    background-color: rgb(211, 76, 76);
+}
+
+.forum-form button[type="reset"]:hover {
+    background-color: rgb(129, 45, 45);
+}
+
+.invalid-input {
+    border-color: #ff0000 !important;
+    border-width: 3px !important;
+    background-color: #ffdddd;
+}

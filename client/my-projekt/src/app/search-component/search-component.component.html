@@ -1,0 +1,30 @@
+<div class="login-container">
+        
+    <div *ngIf="lexikons">
+        <table >
+            <thead class="forum-form">
+                <tr>
+                    <th>Lexikon of the plants:</th>
+                </tr>
+            </thead>
+            <tbody class="forum-form">
+                <tr *ngFor="let lexikon of lexikons" >
+                    <td>{{lexikon.name}}</td>
+                    <td>{{lexikon.size}}</td>
+                    <td>{{lexikon.likes}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="forum-form buttons">
+        <button type="reset" (click)="goBack()">Back</button>
+    </div>
+    <div >
+            <div class="forum-form buttons" >
+                <button *ngIf="this.user?.title=='admin'" type="button" (click)="navigate('/plant')">Register a plant</button>
+            </div>
+
+    </div>
+    
+</div>
+

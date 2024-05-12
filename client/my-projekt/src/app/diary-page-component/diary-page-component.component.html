@@ -1,0 +1,19 @@
+<div *ngIf="diarys">
+    <table>
+        <thead>
+            <tr>
+                <th>My diary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let diary of diarys" >
+                <td>{{diary.diary}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="forum-form buttons">
+        <button type="reset" (click)="goBack()">Back</button>
+    </div>
+</div>
+

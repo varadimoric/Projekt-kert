@@ -1,0 +1,53 @@
+<div class="login-container">
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <td><p>Menu:</p></td>
+                    <td><p>FORUM</p></td>
+                    <td><p>Share your ideas:</p></td>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="forum-form">
+                            <button type="button" (click)="navigate('/search')">Search</button>
+                        </div>
+                        <div class="forum-form">
+                            <button type="button" (click)="navigate('/diary')">Diary</button>
+                        </div>
+                        <div class="forum-form">
+                            <button type="reset" (click)="goBack()">Back</button>
+                        </div>
+                    </td>
+                    <td><form class="forum-form" [formGroup]="forumForm" (ngSubmit)="onSubmit()">
+                        <div>
+                        <input formControlName="text" type="text" placeholder="Write about your day" />
+                        </div>
+                        <div class="forum-form">
+                            <button type="submit">Share</button>
+                        </div>
+                        
+                    </form></td>
+                    <td>
+                        <div class="login-container">
+                                <div *ngIf="texts">
+                                    <div *ngFor="let text of texts" >
+                                        <div>{{text.text}}</div>
+                                    </div>       
+                                </div>
+                            </div>
+                        
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+    
+
+   
+   </div> 
+

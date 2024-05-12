@@ -1,0 +1,16 @@
+<div class="login-container">
+    <form class="diary-form" [formGroup]="diaryForm" (ngSubmit)="onSubmit()">
+        <div>
+        <input class="forum-form" formControlName="diary" type="text" placeholder="My Diary" />
+        </div>
+        <div class="forum-form buttons">
+            <button type="submit">Save</button>
+        </div>
+        <div class="forum-form buttons">
+            <button type="button" (click)="navigate('/diary-page')">View my diary</button>
+        </div>
+        <div class="forum-form buttons">
+            <button type="reset" (click)="goBack()">Back</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,13 @@
+<div class=" login-container">
+    <form class="lexikon-form" [formGroup]="lexikonForm" (ngSubmit)="onSubmit()">
+        <input formControlName="name" type="text" placeholder="Name" required [ngClass]="{'.invalid-input': lexikonForm.get('name')?.errors}"/>
+        <input formControlName="size" type="text" placeholder="Size"/>
+        <input formControlName="likes" type="text" placeholder="Likes"/>
+        <div class="buttons">
+            <button type="submit">Register</button>
+        </div>
+        <div class="buttons">
+            <button type="reset" (click)="goBack()">Back</button>
+        </div>
+    </form>
+</div>
